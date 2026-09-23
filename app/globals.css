@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Caveat:wght@500;600;700&family=Inter:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-anton: 'Anton', Impact, 'Arial Black', sans-serif;
+  --font-sans: 'Plus Jakarta Sans', var(--font-inter), system-ui, sans-serif;
+  --font-handwritten: 'Caveat', cursive;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #fdfdfe;
+  color: #1e293b;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Display Typography for Hero */
+.font-display {
+  font-family: var(--font-anton);
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+}
+
+.font-handwritten {
+  font-family: var(--font-handwritten), 'Caveat', cursive;
+}
+
+/* Senior Frontend Designer: Transparent Cutout Stroke for FUTURE */
+.text-stroke-white {
+  color: transparent;
+  -webkit-text-stroke: 2.5px #ffffff;
+}
+
+.text-stroke-white-thick {
+  color: transparent;
+  -webkit-text-stroke: 3.5px #ffffff;
+}
+
+.text-transparent-glass {
+  color: transparent;
+  -webkit-text-stroke: 2.5px rgba(255, 255, 255, 0.95);
+  text-shadow: 0 0 20px rgba(0, 223, 137, 0.2);
+}
+
+/* Gradient text utilities */
+.text-gradient-emerald-cyan {
+  background: linear-gradient(135deg, #00df89 0%, #00c9a7 60%, #00d2a0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-cyan-blue {
+  background: linear-gradient(135deg, #00d2d0 0%, #00a2ff 50%, #0066ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Floating animation delays */
+.animation-delay-1000 {
+  animation-delay: 1s;
+}
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+.animation-delay-3000 {
+  animation-delay: 3s;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Floating badge animations */
+@keyframes float-slow {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes float-delayed {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+}
+
+.animate-float {
+  animation: float-slow 5s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: float-delayed 6s ease-in-out infinite;
+}
